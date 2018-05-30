@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Hahathon 2018 project</title>
+    <link href="../static/signup.css" rel="stylesheet">
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+    <style>
+      #map {
+        width: 50%;
+        height: 50%;
+        background-color: grey;
+      }
+     </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3 class="text-muted">Прогнозирование аварийности и технического состояния дома</h3>
+      </div>
+      <div class="jumbotron">
+        <div>
+          <h4>Информация о доме</h4>
+          <p>Адрес: {{street}}, дом {{house}}, корпус {{building}} {{letter}}</p>
+          <p>Район: {{addr_district}}</p>
+          <p>Год постройки: {{data_buildingdate}}</p>
+          <p>УК: {{param_ukname}}</p>
+          <h4>Рейтинг дома</h4>
+            <img src= {{name}}/>
+          <h3><br>Ожидаемая дата и тип ремонта</h3>
+          <p><b>{{repair_years}} г.: {{repair_work_problem}}</b></p>
+          <h4>Местоположение дома</h4>
+          <div id="map"></div>
+            <script>
+              function initMap() {
+                var uluru = {lat: {{lon}} , lng: {{lat}} };
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 17,
+                  center: uluru
+                });
+                var marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map
+                });
+              }
+            </script>
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYfgTF8FFgkLA59yv_WoZyzaaTTAAu05k&callback=initMap">
+            </script>
+      </div>
+    </div>
+  </body>
+</html>
