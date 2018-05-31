@@ -1,0 +1,39 @@
+
+<!-- saved from url=(0026)http://127.0.0.1:5000/find -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Hahathon 2018 project</title>
+    <link href="./Hahathon 2018 project 2_files/signup.css" rel="stylesheet">
+    <link href="./Hahathon 2018 project 2_files/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <div class="header">
+            <h3 class="text-muted">Прогнозирование аварийности и технического состояния дома</h3>
+        </div>
+        <div class="jumbotron">
+            <h1>Безопасный дом</h1>
+            <form action="http://127.0.0.1:5000/find" method="post" name="login" class="form-signin">
+                <input id="csrf_token" name="csrf_token" type="hidden" value="IjU4YWJmNGUwYzdlZDJkNmE4ODEyNTRkMmZiOTI4NDRhNzE1Njg0Zjki.DfFvWg.tKSZyPjdH5nZslffAaMqUvzBOyc">
+                <p>
+                    <input class="form-control" id="street" name="street" placeholder="Улица" type="text" value="">
+                </p>
+                <p>
+                    <input class="form-control" id="house" name="house" placeholder="Дом" type="text" value="">
+                </p>
+                <p>
+                    <input class="form-control" id="building" name="building" placeholder="Корпус" type="text" value="">
+                </p>
+                <p>
+                    <input class="form-control" id="letter" name="letter" placeholder="Литер" type="text" value="">
+                </p>
+                <p><input type="submit" value="Sign In" class="btn btn-lg btn-primary btn-block"></p>
+            </form>
+        </div>
+        <div>
+            <footer class="footer">
+                <p>© MLDivers 2018</p>
+            </footer>
+        </div>
+    </div>
+  
+</body></html>
